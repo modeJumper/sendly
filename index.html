@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Send nudes quest</title>
+	<style>
+		html, body {
+		  display: flex;
+		  flex-flow: column nowrap;
+		  height: 100%;
+		  background: #F4B273;
+		  justify-content: center;
+		}
+
+		img {
+		  max-width: 64px;
+		  max-height: 64px;
+		  margin: auto;
+		}
+
+		div.scream {
+		  position: absolute;
+		  left: 25%;
+		  top: 25%;
+		  transform: translate(40px) rotate(0deg);
+		  font: 300 24px/26px Georgia, Tahoma, Verdana;
+		  color: #2e2e2e;
+		  opacity: .85;
+		  animation: screaming 1s ease-in-out infinite;
+		}
+
+		#clicker, #message {
+		  color:#f6f6f6;
+		  display:flex;
+		  margin: 0 auto;
+		  font: 300 24px/26px 'Open Sans', Tahoma, Verdana;
+		  cursor: pointer;
+		}
+
+
+		#message {
+		  color: #f6f6f6;
+		  min-height: 20px;
+		  font: 300 20px/20px 'Courier New', Tahoma, Verdana;
+		  transform: translateY(-40px) rotate(30deg);
+		}
+
+		#message.yummy {
+		  animation: forzac .4s ease-out forwards;
+		}
+
+		@keyframes forzac {
+		  100% {
+		    transform: translateY(20px) rotate(0deg);
+		  }
+		}
+
+		@keyframes screaming {
+		  55% {
+		    opacity: 1;
+		    color: red;
+		    transform: translate(25px) rotate(-25deg);
+		  }
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="clicker">
+	  Упс, что тут у нас?<br>
+	  /*клик*/
+	</div>
+	<div id="message"> </div>
+
+<script>
+	clicker.onclick = function() {
+	clicker.style.display = 'none';
+  message.setAttribute("class", "yummy");
+  message.innerHTML = '&#115;&#101;&#110;&#100;&#32;&#98;&#111;&#111;&#98;&#115;';
+  
+  message.onclick = function() {
+		var picture = document.createElement('img');
+    picture.setAttribute("src","https://vk.com/images/stickers/56/64.png");
+    bodyTag = document.getElementsByTagName("body")[0];
+    bodyTag.style.background = "#fff";
+    bodyTag.appendChild(picture);
+    
+    picture.onclick = function() {
+     scream = document.createElement('div');
+     scream.setAttribute("class", "scream");
+     scream.innerHTML = "meow";
+     bodyTag.appendChild(scream);
+     
+     scream.onclick = function() {
+     	scream.remove();
+     }
+    }
+  }
+</script>
+</body>
+</html>
