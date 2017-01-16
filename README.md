@@ -1,1 +1,1 @@
-# sendly
+https://modejumper.github.io/sendly/
